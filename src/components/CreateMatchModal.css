@@ -1,0 +1,75 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 30% transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with transparency */
+    border: 2px solid #6e2c00; /* Brass-colored border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: 33%; /* Dynamic width */
+    max-width: 600px;
+    color: #ecf0f1;
+}
+
+.player-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #d4af37; /* Brass-colored border */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.player-slot.filled img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.player-slot.empty .placeholder {
+    color: #d4af37;
+    text-align: center;
+}
+
+.turn-duration {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.turn-duration select {
+    background-color: #3e3e3e;
+    border: 2px solid #d4af37;
+    color: #ecf0f1;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.create-button, .close-button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #6e2c00; /* Dark brass color */
+    border: 2px solid #d4af37; /* Brass/gold border */
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.create-button:hover, .close-button:hover {
+    background-color: #a35400; /* Lighter brass on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}

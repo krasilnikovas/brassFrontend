@@ -1,0 +1,85 @@
+/* Login.css */
+
+/* Container for the entire login section */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ecf0f1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Card styling for the login form */
+.login-container .login-card {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with 10% transparency */
+    border: 2px solid #6e2c00; /* Brass-colored border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 10px; /* Softer edges */
+    padding: 20px; /* Extra padding inside the card */
+}
+
+/* Form group styling to add spacing between labels and inputs */
+.login-container .form-group {
+    margin-bottom: 1.5rem; /* Space between label and input */
+}
+
+/* Label styling within the form group */
+.login-container .form-group label {
+    color: #d4af37; /* Brass/gold color for labels */
+    background-color: rgba(20, 20, 20, 0.85); /* Dark background for labels */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Light shadow */
+    letter-spacing: 0.05em;
+    margin-bottom: 10px; /* Space between label and input */
+    display: inline-block; /* Ensure label is not full-width */
+}
+
+/* Input field styling */
+.login-container .form-control {
+    background-color: #3e3e3e;
+    border: 2px solid #6e2c00; /* Brass-colored border */
+    color: #ecf0f1;
+    border-radius: 5px;
+    padding: 10px; /* Padding inside inputs */
+}
+
+/* Input field styling when focused */
+.login-container .form-control:focus {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-color: #d4af37; /* Brass/gold color on focus */
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.8); /* Glow effect */
+}
+
+/* Button styling */
+.login-container .btn-primary {
+    background-color: #6e2c00; /* Dark brass color */
+    border: 2px solid #d4af37; /* Brass/gold border */
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px; /* Padding inside the button */
+    text-transform: uppercase; /* Make text uppercase for a stronger look */
+}
+
+/* Button hover effect */
+.login-container .btn-primary:hover {
+    background-color: #a35400; /* Lighter brass on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Title styling for the login form */
+.login-container .card-title {
+    color: #000000; /* Black color for the Login title */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Light shadow */
+    font-family: 'Cinzel', serif; /* A more decorative font for a steampunk feel */
+    font-weight: 900; /* Make the title bolder */
+    letter-spacing: 0.1em;
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 4rem; /* Make the title larger */
+}

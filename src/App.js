@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login'; // Assuming this is the path for your Login component
+import PlayerProfile from './pages/PlayerProfile'; // Path for your Player Profile page
+import Lobby from './pages/Lobby'; // The Lobby component we just created
+import CreateMatch from './pages/CreateMatch'; // The CreateMatch component
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/profile" element={<PlayerProfile />} />
+                <Route path="/lobby" element={<Lobby />} />
+                <Route path="/create-match" element={<CreateMatch />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

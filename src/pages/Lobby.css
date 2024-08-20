@@ -1,0 +1,52 @@
+.lobby-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ecf0f1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lobby-container {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with 10% transparency */
+    border: 2px solid #6e2c00; /* Brass-colored border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.matches-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.matches-table th, .matches-table td {
+    border: 1px solid #6e2c00; /* Brass-colored border */
+    padding: 10px;
+    text-align: center;
+    color: #d4af37;
+    background-color: rgba(20, 20, 20, 0.85); /* Dark background for cells */
+}
+
+.create-new-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #6e2c00; /* Dark brass color */
+    border: 2px solid #d4af37; /* Brass/gold border */
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase; /* Make text uppercase for a stronger look */
+}
+
+.create-new-button:hover {
+    background-color: #a35400; /* Lighter brass on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}

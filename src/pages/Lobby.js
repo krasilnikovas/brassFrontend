@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Lobby.css';
+import '../styles/ButtonStyles.css'; // Import shared button styles
 import backgroundImage from '../assets/BrassGame_Atmosphere.jpg';
 import CreateMatchModal from '../components/CreateMatchModal';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -88,7 +89,7 @@ const Lobby = () => {
                 ) : (
                     <p>No matches available for {gameName}. Create a new one to get started!</p>
                 )}
-                <button className="create-new-button" onClick={handleCreateNewMatch} disabled={!currentPlayer}>
+                <button className="create-new-button btn-shared" onClick={handleCreateNewMatch} disabled={!currentPlayer}>
                     Create New Match
                 </button>
             </div>

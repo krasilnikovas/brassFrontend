@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './CreateMatchModal.css';
+import '../styles/ButtonStyles.css'; // Import shared button styles
 
 const CreateMatchModal = ({ isOpen, onClose, maxPlayers, currentPlayer }) => {
     const [turnDuration, setTurnDuration] = useState(10); // Default to 10 minutes
@@ -71,8 +72,8 @@ const CreateMatchModal = ({ isOpen, onClose, maxPlayers, currentPlayer }) => {
                         <option value={30}>30 minutes</option>
                     </select>
                 </div>
-                <button className="create-button btn-primary" onClick={handleCreateMatch}>Create Match</button>
-                <button className="close-button btn-primary" onClick={onClose}>Close</button>
+                <button className="create-button btn-shared" onClick={handleCreateMatch}>Create Match</button>
+                <button className="close-button btn-shared" onClick={onClose}>Close</button>
             </div>
         </div>
     );

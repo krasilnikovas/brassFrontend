@@ -75,7 +75,7 @@ const PlayerProfile = () => {
                 <div className={`profile-image ${getImageBorderClass()}`}>
                     <img src={selectedImage} alt="Player" />
                 </div>
-                <button className="btn btn-primary" onClick={() => setShowDropdown(!showDropdown)}>
+                <button className="btn btn-primary steampunk-button" onClick={() => setShowDropdown(!showDropdown)}>
                     Change Profile Picture
                 </button>
                 {showDropdown && (
@@ -96,13 +96,11 @@ const PlayerProfile = () => {
                 <h2>Available Games</h2>
                 <div className="game-list">
                     <div
-                        className="game-item"
+                        className="game-item steampunk-button"
                         onClick={() => handleGameClick('Brass')}
-                        style={{ cursor: 'pointer', color: '#3498db', textDecoration: 'underline' }}
                     >
                         Brass
                     </div>
-                    {/* Add more games here as they become available */}
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import axios from 'axios';
 import './CreateMatchModal.css';
 
 const CreateMatchModal = ({ isOpen, onClose, maxPlayers, currentPlayer }) => {
-    const [turnDuration, setTurnDuration] = useState(10);
+    const [turnDuration, setTurnDuration] = useState(10); // Default to 10 minutes
 
     if (!isOpen) return null;
 
@@ -11,6 +11,7 @@ const CreateMatchModal = ({ isOpen, onClose, maxPlayers, currentPlayer }) => {
         const slots = [];
         for (let i = 0; i < maxPlayers; i++) {
             if (i === 0) {
+                // Display current player in the first slot
                 slots.push(
                     <div key={i} className="player-slot filled">
                         <img src={currentPlayer.profilePicture} alt={currentPlayer.name} />
@@ -37,17 +38,17 @@ const CreateMatchModal = ({ isOpen, onClose, maxPlayers, currentPlayer }) => {
     const handleCreateMatch = () => {
         const newMatch = {
             createdBy: currentPlayer.name,
-            currentPlayers: 1,
+            currentPlayers: 1, // Assuming the creator is the first player
             maxPlayers: maxPlayers,
             turnDuration: turnDuration,
             status: "waiting",
-            game: { name: "Brass" }
+            gameName: "Brass" // Assuming the game is Brass; adjust if dynamic
         };
 
         axios.post('http://localhost:8080/api/matches/create', newMatch)
             .then(response => {
                 console.log('Match created:', response.data);
-                onClose();
+                onClose(); // Close the modal after creation
             })
             .catch(error => {
                 console.error('There was an error creating the match!', error);

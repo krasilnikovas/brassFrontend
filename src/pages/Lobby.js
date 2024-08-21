@@ -21,6 +21,7 @@ const Lobby = () => {
                 const response = await axios.get('http://localhost:8080/api/matches', {
                     params: { game: gameName }
                 });
+                console.log('Fetched matches for game:', gameName, response.data);
                 setMatches(response.data);
             } catch (error) {
                 console.error('There was an error fetching the matches!', error);
@@ -75,9 +76,9 @@ const Lobby = () => {
                         {matches.map((match, index) => (
                             <tr key={index} onClick={() => handleMatchClick(match.id)}>
                                 <td>{match.id}</td>
-                                <td>{match.game?.name || 'Unknown Game'}</td>
+                                <td>{match.gameName || 'Unknown Game'}</td>
                                 <td>{match.createdBy}</td>
-                                <td>{match.currentPlayers}/{match.game?.maxPlayers || 'N/A'}</td>
+                                <td>{match.currentPlayers}/{match.maxPlayers || 'N/A'}</td>
                                 <td>{match.turnDuration} minutes</td>
                                 <td>{match.status}</td>
                             </tr>
@@ -87,7 +88,7 @@ const Lobby = () => {
                 ) : (
                     <p>No matches available for {gameName}. Create a new one to get started!</p>
                 )}
-                <button className="create-new-button btn-primary" onClick={handleCreateNewMatch} disabled={!currentPlayer}>
+                <button className="create-new-button" onClick={handleCreateNewMatch} disabled={!currentPlayer}>
                     Create New Match
                 </button>
             </div>
